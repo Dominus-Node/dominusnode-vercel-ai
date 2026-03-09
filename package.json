@@ -1,0 +1,34 @@
+{
+  "name": "@dominusnode/ai-tools",
+  "version": "1.2.1",
+  "description": "Vercel AI SDK tools for Dominus Node rotating proxy service",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "clean": "rm -rf dist",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dominusnode/sdk": "^1.1.1",
+    "ai": ">=3.0.0",
+    "zod": ">=3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
